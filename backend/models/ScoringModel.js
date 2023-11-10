@@ -10,3 +10,5 @@ const scoringSchema = mongoose.Schema(
     timestamps: true,
   }
 );
+const Scoring = mongoose.model("User", scoringSchema);
+module.exports = Scoring;

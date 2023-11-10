@@ -1,6 +1,7 @@
 const participantSchema = mongoose.Schema(
   {
     name: { type: String, required: true },
+    teamName: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     SRN: { type: String, required: true, unique: true },
   },
@@ -9,5 +10,5 @@ const participantSchema = mongoose.Schema(
   }
 );
 
-const Particpant = mongoose.model("Participant", participantSchema);
-module.exports = Particpant;
+const Participant = mongoose.model("Participant", participantSchema);
+module.exports = Participant;
