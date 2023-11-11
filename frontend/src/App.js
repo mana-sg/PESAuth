@@ -1,10 +1,11 @@
 import "./App.css";
-import mainPageBlob from "./mainpageBlob.gif";
+import { Route } from "react-router-dom";
+import entryPages from "./Pages/entryPages";
 
 function App() {
   return (
     <div className="App">
-      <img src={mainPageBlob} alt="Hello" />
+      <Route path="/" component={entryPages} exact />
     </div>
   );
 }
