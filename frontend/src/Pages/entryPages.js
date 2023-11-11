@@ -14,7 +14,7 @@ import {
   Tab,
   HStack,
 } from "@chakra-ui/react";
-import mainPageBlob from "./mainpageBlob.gif";
+import mainPageBlob from "./../assets/mainpageBlob.gif";
 import LogIn from "../components/Authentication/LogIn";
 import SignUp from "../components/Authentication/SignUp";
 import logo from "./../assets/logo.svg";

@@ -8,7 +8,6 @@ import {
   InputRightElement,
   Button,
   useToast,
-  Image,
 } from "@chakra-ui/react";
 import axios from "axios";
 import { useState } from "react";

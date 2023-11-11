@@ -10,10 +10,16 @@ const NavBar = () => {
         justify="space-between"
         padding="1rem"
         color="white"
-        margin={"10px 0 0 75px"}
+        margin={"20px 0 0 75px"}
       >
-        <Link href="#" fontSize="xl" fontWeight="bold">
-          <Image src={logo} alt="logo" w={"75px"} />
+        <Link
+          href="#"
+          fontSize="xl"
+          fontWeight="bold"
+          marginRight={"2rem"}
+          marginTop={"5px"}
+        >
+          <Image src={logo} alt="logo" w={"70px"} />
         </Link>
         <Flex
           fontFamily={"lastica"}
@@ -22,17 +28,20 @@ const NavBar = () => {
           m={"25px 0 0 0"}
           fontSize={"15px"}
         >
-          <Link href="#" marginRight="10rem" marginLeft="2rem">
+          <Link href="/" marginRight="8.2rem">
             Home
           </Link>
-          <Link href="#" marginRight="10rem">
-            About
+          <Link href="/events" marginRight="8.2rem">
+            Events
           </Link>
-          <Link href="#" marginRight="10rem">
-            Services
+          <Link href="#" marginRight="8.2rem">
+            Coupons
           </Link>
-          <Link href="#" marginRight="10rem">
-            Contact
+          <Link href="#" marginRight="8.2rem">
+            Leaderboard
+          </Link>
+          <Link href="/scoring" marginRight="8.2rem">
+            Scoring
           </Link>
         </Flex>
       </Flex>
