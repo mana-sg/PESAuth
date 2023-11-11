@@ -8,9 +8,12 @@ import {
   InputRightElement,
   Button,
   useToast,
+  Image,
 } from "@chakra-ui/react";
 import axios from "axios";
 import { useState } from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import buttonImage from "./../../assets/buttonImage.svg";
 
 const SignUp = () => {
   const [name, setName] = useState();
@@ -20,9 +23,11 @@ const SignUp = () => {
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  // const history = useHistory();
   const toast = useToast();
 
   const handleShow = () => setShow(!show);
+  const history = useHistory();
 
   const submitHandler = async () => {
     setLoading(true);
@@ -34,6 +39,7 @@ const SignUp = () => {
         isClosable: true,
         position: "bottom",
       });
+      setLoading(false);
       return;
     }
     if (password !== confirmPassword) {
@@ -44,6 +50,7 @@ const SignUp = () => {
         isClosable: true,
         position: "bottom",
       });
+      setLoading(false);
       return;
     }
     try {
@@ -67,7 +74,8 @@ const SignUp = () => {
 
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
-      //   history.push("/events");
+      history.push("/events");
+      return;
     } catch (error) {
       toast({
         title: "Error Occured",
@@ -124,11 +132,15 @@ const SignUp = () => {
       </FormControl>
       <Button
         colorScheme="purple"
-        width={"100%"}
+        width={"50%"}
         mt={15}
         borderRadius={"full"}
         isLoading={loading}
         onClick={submitHandler}
+        backgroundImage={buttonImage}
+        backgroundSize={"cover"}
+        backgroundPosition={"center"}
+        _hover={{ opacity: 0.8 }}
       >
         Sign Up
       </Button>

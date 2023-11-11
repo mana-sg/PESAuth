@@ -6,3 +6,7 @@
   background-position: center;
   color: black;
 }
+@font-face {
+  font-family: "lastica";
+  src: url(./fonts/Lastica.otf);
+}

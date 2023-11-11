@@ -11,6 +11,8 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import axios from "axios";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import buttonImage from "./../../assets/buttonImage.svg";
 
 const LogIn = () => {
   const [password, setPassword] = useState();
@@ -20,7 +22,7 @@ const LogIn = () => {
   const toast = useToast();
 
   const handleShow = () => setShow(!show);
-
+  const history = useHistory();
   const submitHandler = async () => {
     setLoading(true);
     if (!email || !password) {
@@ -54,6 +56,8 @@ const LogIn = () => {
       });
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
+      history.push("/events");
+      return;
     } catch (error) {
       toast({
         title: "Error Occured",
@@ -93,13 +97,17 @@ const LogIn = () => {
       </FormControl>
       <Button
         colorScheme="purple"
-        width={"100%"}
+        width={"50%"}
         mt={15}
         borderRadius={"full"}
         onClick={submitHandler}
         isLoading={loading}
+        backgroundImage={buttonImage}
+        backgroundSize={"cover"}
+        backgroundPosition={"center"}
+        _hover={{ opacity: 0.8 }}
       >
-        Sign Up
+        Log In
       </Button>
     </VStack>
   );

@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Container,
@@ -12,16 +12,32 @@ import {
   TabList,
   TabPanels,
   Tab,
+  HStack,
 } from "@chakra-ui/react";
 import mainPageBlob from "./mainpageBlob.gif";
 import LogIn from "../components/Authentication/LogIn";
 import SignUp from "../components/Authentication/SignUp";
+import logo from "./../assets/logo.svg";
 
 const entryPages = () => {
+  const [view, setView] = useState(true);
+
   return (
-    <Container maxW={"80%"}>
+    <Container maxW={"100%"}>
       <Flex>
         <Flex flexDirection={"column"}>
+          <HStack>
+            <Image src={logo} alt="logo" w={"75px"} m={"30px 0 10px 160px"} />
+            <Text
+              color={"white"}
+              fontSize={"2xl"}
+              fontWeight={"bold"}
+              fontFamily={"lastica"}
+              m={"35px 0 10px 20px "}
+            >
+              PES University
+            </Text>
+          </HStack>
           <Box
             display={"flex"}
             justifyContent={"center"}
@@ -29,9 +45,9 @@ const entryPages = () => {
             h={"45px"}
             borderWidth={"3px"}
             borderTopRadius={12}
-            m={"130px 0 4px 0"}
+            m={view ? "20px 0 4px 150px" : "70px 0 4px 150px"}
           >
-            <Text fontSize={"2xl"} color={"white"}>
+            <Text fontSize={"3xl"} fontFamily={"lastica"} color={"white"}>
               PESAUTH
             </Text>
           </Box>
@@ -39,9 +55,14 @@ const entryPages = () => {
             w={"450px"}
             borderWidth={"1px"}
             borderBottomRadius={12}
+            m={"0 0 0 150px"}
             bg={"white"}
           >
-            <Tabs variant="soft-rounded" colorScheme="purple">
+            <Tabs
+              variant="soft-rounded"
+              colorScheme="purple"
+              onChange={() => setView(!view)}
+            >
               <TabList m={"1em"}>
                 <Tab width="50%">SignUp</Tab>
                 <Tab width="50%">LogIn</Tab>
@@ -58,7 +79,7 @@ const entryPages = () => {
           </Box>
         </Flex>
         <Spacer />
-        <Box maxW={"400px"} m={"200px 0 0 0"}>
+        <Box maxW={"400px"} m={"200px 150px 0 0"}>
           <Image src={mainPageBlob} alt="blob" draggable="false"></Image>
         </Box>
       </Flex>
