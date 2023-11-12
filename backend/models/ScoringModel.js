@@ -2,13 +2,17 @@ const mongoose = require("mongoose");
 
 const scoringSchema = mongoose.Schema(
   {
-    teamName: { type: String, required: true },
-    reviewMessage: { type: String, required: true },
-    reviewScore: { type: String, required: true },
+    teamId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Team",
+      unique: false,
+    },
+    score: { type: String, required: true, unique: false },
+    comment: { type: String, required: true, unique: false },
   },
   {
     timestamps: true,
   }
 );
-const Scoring = mongoose.model("User", scoringSchema);
+const Scoring = mongoose.model("Scoring", scoringSchema);
 module.exports = Scoring;

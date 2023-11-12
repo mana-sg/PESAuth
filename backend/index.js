@@ -5,6 +5,9 @@ const connectDB = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
 const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
 const eventRoutes = require("./routes/eventRoutes");
+const teamRoutes = require("./routes/teamRoutes");
+const participantRoutes = require("./routes/participantRoutes");
+const scoringRoutes = require("./routes/scoringRoutes");
 
 dotenv.config();
 connectDB();
@@ -18,6 +21,9 @@ app.get("/", (req, res) => {
 
 app.use("/api/user", userRoutes);
 app.use("/api/event", eventRoutes);
+app.use("/api/team", teamRoutes);
+app.use("/api/participant", participantRoutes);
+app.use("/api/score", scoringRoutes);
 app.use(notFound);
 app.use(errorHandler);
 

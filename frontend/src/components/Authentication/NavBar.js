@@ -28,7 +28,7 @@ const NavBar = () => {
           m={"25px 0 0 0"}
           fontSize={"15px"}
         >
-          <Link href="/" marginRight="8.2rem">
+          <Link href="/home" marginRight="8.2rem">
             Home
           </Link>
           <Link href="/events" marginRight="8.2rem">
