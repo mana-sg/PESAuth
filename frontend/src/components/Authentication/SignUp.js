@@ -73,7 +73,7 @@ const SignUp = () => {
 
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
-      history.push("/events");
+      history.push("/home");
       return;
     } catch (error) {
       toast({

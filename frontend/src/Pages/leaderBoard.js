@@ -1,8 +1,8 @@
 import React from "react";
 import NavBar from "../components/Authentication/NavBar";
 
-const eventPages = () => {
+const leaderBoard = () => {
   return <NavBar />;
 };
 
-export default eventPages;
+export default leaderBoard;

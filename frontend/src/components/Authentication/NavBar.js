@@ -34,10 +34,10 @@ const NavBar = () => {
           <Link href="/events" marginRight="8.2rem">
             Events
           </Link>
-          <Link href="#" marginRight="8.2rem">
+          <Link href="/coupons" marginRight="8.2rem">
             Coupons
           </Link>
-          <Link href="#" marginRight="8.2rem">
+          <Link href="/leaderboard" marginRight="8.2rem">
             Leaderboard
           </Link>
           <Link href="/scoring" marginRight="8.2rem">
