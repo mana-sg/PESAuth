@@ -4,7 +4,9 @@ const generateToken = require("../config/generateToken");
 const Event = require("../models/EventModel");
 
 const addEvent = asyncHandler(async (req, res) => {
-  const { userId, name, date } = req.body;
+  const { name, date } = req.body;
+  const userId = req.user._id;
+
   if (!name || !date) {
     res.status(400);
     throw new Error("Please fill in all the fields");
@@ -47,4 +49,20 @@ const deleteEvent = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { addEvent, deleteEvent };
+const fetchEvents = asyncHandler(async (req, res) => {
+  const userId = req.user._id;
+  const userExists = await User.findById(userId);
+  if (!userExists) {
+    res.status(404);
+    throw new Error("User does not exist");
+  }
+  const events = await Event.find({ host: userId });
+  if (events) {
+    res.status(201).json({ results: events });
+  } else {
+    res.status(500);
+    throw new Error("Internal server error");
+  }
+});
+
+module.exports = { addEvent, deleteEvent, fetchEvents };

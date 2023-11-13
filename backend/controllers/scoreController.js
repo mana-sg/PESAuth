@@ -7,12 +7,15 @@ const isNumeric = (value) => {
 };
 
 const addScore = asyncHandler(async (req, res) => {
-  const { teamId, score, comment } = req.body;
-  if (!teamId || !score || !comment) {
+  const { teamName, score, comment, eventId } = req.body;
+  if (!teamName || !score || !comment) {
     res.status(400);
     throw new Error("Please fill all the details");
   }
-  const teamExists = await Team.findById(teamId);
+  const teamExists = await Team.findOne({
+    teamName: teamName,
+    eventId: eventId,
+  });
   if (!teamExists) {
     res.status(400);
     throw new Error("Please enter a valid team name");
@@ -23,10 +26,10 @@ const addScore = asyncHandler(async (req, res) => {
   }
   teamExists.score = `${parseInt(teamExists.score, 10) + parseInt(score, 10)}`;
   teamExists.save();
-  const scoring = await Scoring.create({ teamId, score, comment });
+  const scoring = await Scoring.create({ teamName, score, comment });
   if (scoring) {
     res.status(201).json({
-      teamId: scoring.teamId,
+      teamName: scoring.teamName,
       score: scoring.score,
       comment: scoring.comment,
     });

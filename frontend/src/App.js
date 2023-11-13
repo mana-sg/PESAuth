@@ -6,6 +6,8 @@ import scoringPage from "./Pages/scoringPage";
 import couponsPage from "./Pages/couponsPage";
 import leaderBoard from "./Pages/leaderBoard";
 import HomePage from "./Pages/HomePage";
+import CreatorsPage from "./Pages/CreatorsPage";
+import AttendancePage from "./Pages/AttendancePage";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Route path="/scoring" component={scoringPage} exact />
       <Route path="/coupons" component={couponsPage} exact />
       <Route path="/leaderboard" component={leaderBoard} exact />
+      <Route path="/creators" component={CreatorsPage} exact />
+      <Route path="/attendance" component={AttendancePage} exact />
     </div>
   );
 }

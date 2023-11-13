@@ -9,13 +9,14 @@ import {
   Container,
   Box,
 } from "@chakra-ui/react";
+import { navItems } from "../constants";
 
 const couponsPage = () => {
   return (
-    <Container maxW={"full"} centerContent>
+    <Container maxW={"full"}>
       <Flex>
         <VStack>
-          <NavBar />
+          <NavBar items={navItems} />
           <HStack>
             <VStack>
               <Text

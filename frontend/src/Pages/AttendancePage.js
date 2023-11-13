@@ -2,8 +2,8 @@ import React from "react";
 import NavBar from "../components/Authentication/NavBar";
 import { navItems } from "../constants";
 
-const leaderBoard = () => {
+const AttendancePage = () => {
   return <NavBar items={navItems} />;
 };
 
-export default leaderBoard;
+export default AttendancePage;

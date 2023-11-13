@@ -3,12 +3,13 @@ import NavBar from "../components/Authentication/NavBar";
 import ScoreForm from "../components/formScoring/ScoreForm";
 import blob1 from "./../assets/blob1.gif";
 import blob2 from "./../assets/blob2.gif";
+import { navItems } from "../constants";
 
 const scoringPage = () => {
   return (
     <Container maxW={"100%"} centerContent>
       <Flex flexDir={"column"}>
-        <NavBar />
+        <NavBar items={navItems} />
         <Flex m={"50px 0 0 175px"}>
           <Flex flexDir={"column"}>
             <Text
