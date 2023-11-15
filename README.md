@@ -13,10 +13,9 @@ There is also an option for the host to score the teams and a leaderboard to sho
 ### Usage:
 
 - Clone the project:
-
-```
-  git clone https://github.com/mana-sg/PESAuth
-```
+  ```
+    git clone https://github.com/mana-sg/PESAuth
+  ```
 
 - Make a .env file in the root folder:
 
