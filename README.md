@@ -13,6 +13,7 @@ There is also an option for the host to score the teams and a leaderboard to sho
 ### Usage:
 
 - Clone the project:
+
   ```
     git clone https://github.com/mana-sg/PESAuth
   ```
@@ -22,6 +23,7 @@ There is also an option for the host to score the teams and a leaderboard to sho
 - The .env file should contain: PORT=5000, JWT_SECRET, MONGO_URL
 
 - Run the following commands:
+
   ```
     cd PESAuth
     npm i
@@ -29,12 +31,14 @@ There is also an option for the host to score the teams and a leaderboard to sho
   ```
 
 - You have installed all the required backend packages, now run this command for frontend:
+
   ```
     cd frontend
     npm i
   ```
 
 - Now run these commands in two different terminals:
+
   ```
     npm start (in frontend directory).
     npm start (in root file).
