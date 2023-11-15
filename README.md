@@ -14,32 +14,32 @@ There is also an option for the host to score the teams and a leaderboard to sho
 
 - Clone the project:
 
-'''
-git clone https://github.com/mana-sg/PESAuth
-'''
+```
+  git clone https://github.com/mana-sg/PESAuth
+```
 
 - Make a .env file in the root folder:
 
 - The .env file should contain: PORT=5000, JWT_SECRET, MONGO_URL
 
 - Run the following commands:
-  '''
-  cd PESAuth
-  npm i
-  npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion express mongoose nodemon jsonwebtoken
-  '''
+  ```
+    cd PESAuth
+    npm i
+    npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion express mongoose nodemon jsonwebtoken
+  ```
 
 - You have installed all the required backend packages, now run this command for frontend:
-  '''
-  cd frontend
-  npm i
-  '''
+  ```
+    cd frontend
+    npm i
+  ```
 
 - Now run these commands in two different terminals:
-  '''
-  npm start (in frontend directory).
-  npm start (in root file).
-  '''
+  ```
+    npm start (in frontend directory).
+    npm start (in root file).
+  ```
 
 - Your website has been hosted on local server (frontend: port 3000, backend: port 5000).
 
