@@ -92,7 +92,7 @@ const EventPages = () => {
               }
               key={index}
             >
-              <EventCards event={event} />
+              <EventCards event={event} submit={submit} setSubmit={setSubmit} />
             </Flex>
           ))}
           <Button

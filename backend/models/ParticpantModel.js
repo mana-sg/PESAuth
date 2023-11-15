@@ -1,7 +1,8 @@
+const mongoose = require("mongoose");
+
 const participantSchema = mongoose.Schema(
   {
-    name: { type: String, required: true, unique: false },
-    SRN: { type: String, required: true, unique: true },
+    PRN: { type: String, required: true, unique: false },
     lunch: { type: String, required: true, unique: false },
     goodies: { type: String, required: true, unique: false },
     snacks: { type: String, required: true, unique: false },

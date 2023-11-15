@@ -8,6 +8,7 @@ const eventRoutes = require("./routes/eventRoutes");
 const teamRoutes = require("./routes/teamRoutes");
 const participantRoutes = require("./routes/participantRoutes");
 const scoringRoutes = require("./routes/scoringRoutes");
+const couponRoutes = require("./routes/couponRoutes");
 
 dotenv.config();
 connectDB();
@@ -24,6 +25,7 @@ app.use("/api/event", eventRoutes);
 app.use("/api/team", teamRoutes);
 app.use("/api/participant", participantRoutes);
 app.use("/api/score", scoringRoutes);
+app.use("/api/coupons", couponRoutes);
 app.use(notFound);
 app.use(errorHandler);
 

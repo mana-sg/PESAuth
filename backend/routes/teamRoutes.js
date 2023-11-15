@@ -1,10 +1,10 @@
 const express = require("express");
-const { addTeam, deleteTeam } = require("../controllers/teamController");
+const { addTeam, fetchTop5 } = require("../controllers/teamController");
 const { protect } = require("../middlewares/authMiddleware");
 
 const router = express.Router();
 
-router.post("/add", addTeam);
-router.post("/remove", deleteTeam);
+router.route("/add").post(protect, addTeam);
+router.route("/fetch").post(protect, fetchTop5);
 
 module.exports = router;
