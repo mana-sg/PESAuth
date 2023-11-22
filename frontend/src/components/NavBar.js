@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Image, Link } from "@chakra-ui/react";
-import logo from "./../../assets/logo.svg";
+import logo from "./../assets/logo.svg";
 
 const NavBar = ({ items }) => {
   return (

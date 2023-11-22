@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import NavBar from "../components/Authentication/NavBar";
+import NavBar from "../components/NavBar";
 import { Container, Flex, Image, Box, Text, Button } from "@chakra-ui/react";
 import { navItemsEventPage as navItems } from "../constants";
 import blob1 from "./../assets/blob1.gif";

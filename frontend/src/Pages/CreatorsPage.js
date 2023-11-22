@@ -1,6 +1,6 @@
 import React from "react";
 import { navItemsEventPage as navItems } from "../constants";
-import NavBar from "../components/Authentication/NavBar";
+import NavBar from "../components/NavBar";
 import { Container, Text, Box, Image, Flex, VStack } from "@chakra-ui/react";
 import profileBlob from "../assets/profileBlob.gif";
 

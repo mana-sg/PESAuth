@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NavBar from "../components/Authentication/NavBar";
+import NavBar from "../components/NavBar";
 import {
   Flex,
   VStack,

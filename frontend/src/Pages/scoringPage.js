@@ -1,6 +1,6 @@
 import { Container, Flex, Text, Image, Box } from "@chakra-ui/react";
-import NavBar from "../components/Authentication/NavBar";
-import ScoreForm from "../components/formScoring/ScoreForm";
+import NavBar from "../components/NavBar";
+import ScoreForm from "../components/ScoreForm";
 import blob1 from "./../assets/blob1.gif";
 import blob2 from "./../assets/blob2.gif";
 import { navItems } from "../constants";
